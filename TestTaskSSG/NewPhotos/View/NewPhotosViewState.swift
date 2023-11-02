@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum NewPhotosViewState {
+    
+    case initialSetup
+    
+}

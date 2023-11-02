@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol NewPhotosViewModelProtocol {
+    
+    var updateUI: ((NewPhotosViewState) -> Void)? { get set }
+    
+    func initial()
+    
+}

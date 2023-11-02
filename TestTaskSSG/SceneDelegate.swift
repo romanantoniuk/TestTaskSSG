@@ -19,7 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        
+        let vm = NewPhotosViewModel()
+        let vc = NewPhotosViewController(vm: vm)
+        let nc = UINavigationController(rootViewController: vc)
+        
+        window?.rootViewController = nc
         window?.makeKeyAndVisible()
     }
     
