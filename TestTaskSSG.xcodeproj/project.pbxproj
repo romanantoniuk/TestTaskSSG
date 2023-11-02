@@ -21,6 +21,9 @@
 		CEBBBC6B2AF3C0400062EB90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEBBBC6A2AF3C0400062EB90 /* SnapKit */; };
 		CEBBBC712AF3CEFA0062EB90 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC702AF3CEFA0062EB90 /* AppColor.swift */; };
 		CEBBBC732AF3D0560062EB90 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC722AF3D0560062EB90 /* BaseView.swift */; };
+		CEBBBC762AF3D51F0062EB90 /* PersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC752AF3D51F0062EB90 /* PersonEntity.swift */; };
+		CEBBBC782AF3D7080062EB90 /* FiltersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC772AF3D7080062EB90 /* FiltersData.swift */; };
+		CEBBBC7A2AF3D76E0062EB90 /* PersonGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC792AF3D76E0062EB90 /* PersonGender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +55,9 @@
 		CEBBBC602AF3A8180062EB90 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		CEBBBC702AF3CEFA0062EB90 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		CEBBBC722AF3D0560062EB90 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CEBBBC752AF3D51F0062EB90 /* PersonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEntity.swift; sourceTree = "<group>"; };
+		CEBBBC772AF3D7080062EB90 /* FiltersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersData.swift; sourceTree = "<group>"; };
+		CEBBBC792AF3D76E0062EB90 /* PersonGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 		CEBBBC4F2AF3A2020062EB90 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CEBBBC752AF3D51F0062EB90 /* PersonEntity.swift */,
+				CEBBBC792AF3D76E0062EB90 /* PersonGender.swift */,
+				CEBBBC772AF3D7080062EB90 /* FiltersData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,12 +238,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBBBC782AF3D7080062EB90 /* FiltersData.swift in Sources */,
 				CEBBBC572AF3A2300062EB90 /* NewPhotosView.swift in Sources */,
 				CEBBBC712AF3CEFA0062EB90 /* AppColor.swift in Sources */,
+				CEBBBC7A2AF3D76E0062EB90 /* PersonGender.swift in Sources */,
 				CEBBBC512AF3A21B0062EB90 /* NewPhotosViewModelProtocol.swift in Sources */,
 				CEBBBC612AF3A8180062EB90 /* AppFonts.swift in Sources */,
 				CEBBBC392AF3A04B0062EB90 /* AppDelegate.swift in Sources */,
 				CEBBBC3B2AF3A04B0062EB90 /* SceneDelegate.swift in Sources */,
+				CEBBBC762AF3D51F0062EB90 /* PersonEntity.swift in Sources */,
 				CEBBBC552AF3A22B0062EB90 /* NewPhotosViewController.swift in Sources */,
 				CEBBBC592AF3A23A0062EB90 /* NewPhotosViewState.swift in Sources */,
 				CEBBBC732AF3D0560062EB90 /* BaseView.swift in Sources */,

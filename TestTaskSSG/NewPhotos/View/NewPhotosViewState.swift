@@ -10,5 +10,8 @@ import Foundation
 enum NewPhotosViewState {
     
     case initialSetup
-    
+    case reloadItems
+    case updateControls
+    case showHideAgeFilter
+
 }

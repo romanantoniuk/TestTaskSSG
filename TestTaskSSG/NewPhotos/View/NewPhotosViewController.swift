@@ -40,12 +40,24 @@ final class NewPhotosViewController: UIViewController {
     }
     
     // MARK: - Actions
-
+    @objc func tapChangeGender() {
+        viewModel.changeGenderToNext()
+    }
+    
+    @objc func tapShowAgeFilter() {
+        viewModel.showHideAgeFilter()
+    }
     
     // MARK: - State render
     private func updateState(_ state: NewPhotosViewState) {
         switch state {
         case .initialSetup:
+            break
+        case .reloadItems:
+            break
+        case .updateControls:
+            break
+        case .showHideAgeFilter:
             break
         }
     }
