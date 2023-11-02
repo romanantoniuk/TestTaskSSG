@@ -22,9 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let vm = NewPhotosViewModel()
         let vc = NewPhotosViewController(vm: vm)
-        let nc = UINavigationController(rootViewController: vc)
-        
-        window?.rootViewController = nc
+
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
     

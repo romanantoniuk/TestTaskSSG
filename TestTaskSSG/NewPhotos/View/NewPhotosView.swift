@@ -6,21 +6,13 @@
 //
 
 import UIKit
+import SnapKit
 
-final class NewPhotosView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("Not implemented")
-    }
-    
-    private func setupViews() {
 
+final class NewPhotosView: BaseView {
+    
+    override func configureUI() {
+        
     }
     
 }

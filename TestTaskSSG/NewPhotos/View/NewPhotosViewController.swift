@@ -34,6 +34,7 @@ final class NewPhotosViewController: UIViewController {
     
     // MARK: - Setup
     private func setupVC() {
+        rootView.titleLabel.text = "New photos"
         viewModel.updateUI = { [weak self] in self?.updateState($0) }
         viewModel.initial()
     }
