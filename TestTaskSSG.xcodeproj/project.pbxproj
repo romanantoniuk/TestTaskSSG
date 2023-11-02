@@ -17,6 +17,8 @@
 		CEBBBC552AF3A22B0062EB90 /* NewPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC542AF3A22B0062EB90 /* NewPhotosViewController.swift */; };
 		CEBBBC572AF3A2300062EB90 /* NewPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC562AF3A2300062EB90 /* NewPhotosView.swift */; };
 		CEBBBC592AF3A23A0062EB90 /* NewPhotosViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC582AF3A23A0062EB90 /* NewPhotosViewState.swift */; };
+		CEBBBC5F2AF3A77A0062EB90 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEBBBC5E2AF3A77A0062EB90 /* Roboto-Medium.ttf */; };
+		CEBBBC612AF3A8180062EB90 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBBC602AF3A8180062EB90 /* AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CEBBBC542AF3A22B0062EB90 /* NewPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotosViewController.swift; sourceTree = "<group>"; };
 		CEBBBC562AF3A2300062EB90 /* NewPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotosView.swift; sourceTree = "<group>"; };
 		CEBBBC582AF3A23A0062EB90 /* NewPhotosViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotosViewState.swift; sourceTree = "<group>"; };
+		CEBBBC5E2AF3A77A0062EB90 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CEBBBC602AF3A8180062EB90 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				CEBBBC382AF3A04B0062EB90 /* AppDelegate.swift */,
 				CEBBBC3A2AF3A04B0062EB90 /* SceneDelegate.swift */,
 				CEBBBC3C2AF3A04B0062EB90 /* ViewController.swift */,
+				CEBBBC5C2AF3A6F90062EB90 /* Helpers */,
 				CEBBBC4C2AF3A1E40062EB90 /* NewPhotos */,
 				CEBBBC412AF3A04C0062EB90 /* Assets.xcassets */,
 				CEBBBC432AF3A04C0062EB90 /* LaunchScreen.storyboard */,
@@ -109,6 +114,23 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CEBBBC5C2AF3A6F90062EB90 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBBC5D2AF3A7030062EB90 /* Fonts */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEBBBC5D2AF3A7030062EB90 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBBC5E2AF3A77A0062EB90 /* Roboto-Medium.ttf */,
+				CEBBBC602AF3A8180062EB90 /* AppFonts.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +193,7 @@
 			files = (
 				CEBBBC452AF3A04C0062EB90 /* LaunchScreen.storyboard in Resources */,
 				CEBBBC422AF3A04C0062EB90 /* Assets.xcassets in Resources */,
+				CEBBBC5F2AF3A77A0062EB90 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +207,7 @@
 				CEBBBC572AF3A2300062EB90 /* NewPhotosView.swift in Sources */,
 				CEBBBC512AF3A21B0062EB90 /* NewPhotosViewModelProtocol.swift in Sources */,
 				CEBBBC3D2AF3A04B0062EB90 /* ViewController.swift in Sources */,
+				CEBBBC612AF3A8180062EB90 /* AppFonts.swift in Sources */,
 				CEBBBC392AF3A04B0062EB90 /* AppDelegate.swift in Sources */,
 				CEBBBC3B2AF3A04B0062EB90 /* SceneDelegate.swift in Sources */,
 				CEBBBC552AF3A22B0062EB90 /* NewPhotosViewController.swift in Sources */,
