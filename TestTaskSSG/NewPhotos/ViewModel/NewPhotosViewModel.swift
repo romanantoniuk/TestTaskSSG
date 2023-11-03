@@ -9,13 +9,17 @@ import Foundation
 
 final class NewPhotosViewModel: NewPhotosViewModelProtocol {
     
-    var items: Set<PersonEntity> = []
-    var filtersData: FiltersData = .init(gender: .any, minAge: 18, maxAge: 65)
+    var items: [PersonEntity] = []
+    var filtersData: FiltersData = .init(gender: .any,
+                                         minAge: Constants.minimumAge,
+                                         maxAge: Constants.maximumAge,
+                                         country: .init(iconName: "Azerbaijan",
+                                                        name: "Azerbaijan"))
     var isShowAgeFilters: Bool = false
     
     var updateUI: ((NewPhotosViewState) -> Void)?
 
-    private var allItems: Set<PersonEntity> = []
+    private var allItems: [PersonEntity] = []
     
     func initial() {
         generateItems()
@@ -25,12 +29,13 @@ final class NewPhotosViewModel: NewPhotosViewModelProtocol {
     func changeGenderToNext() {
         let newGender = PersonGender.nextGender(after: filtersData.gender)
         filtersData.gender = newGender
+        updateUI?(.updateControls(type: .gender))
         filterItems()
     }
     
     func showHideAgeFilter() {
         isShowAgeFilters.toggle()
-        updateUI?(.updateControls)
+        updateUI?(.updateControls(type: .age))
         updateUI?(.showHideAgeFilter)
     }
     
@@ -38,7 +43,7 @@ final class NewPhotosViewModel: NewPhotosViewModelProtocol {
         filtersData.minAge = min
         filtersData.maxAge = max
         filterItems()
-        updateUI?(.updateControls)
+        updateUI?(.updateControls(type: .age))
     }
     
     private func filterItems() {
@@ -52,13 +57,16 @@ final class NewPhotosViewModel: NewPhotosViewModelProtocol {
     
     // helpers functions
     private func generateItems() {
-        (0..<10).forEach { number in
-            let age = Int.random(in: 18..<66)
-            let man = PersonEntity(imageName: "man\(number)", age: age, gender: .man)
-            allItems.insert(man)
-            let woman = PersonEntity(imageName: "woman\(number)", age: age, gender: .woman)
-            allItems.insert(woman)
+        (0..<20).forEach { number in
+            let randomValueForChangeOrder = Int.random(in: 0..<99999)
+            let age = Int.random(in: 19..<66)
+            let man = PersonEntity(imageName: "man\(number)", age: age, gender: .man, randomValueForChangeOrder: randomValueForChangeOrder)
+            allItems.append(man)
+            let woman = PersonEntity(imageName: "woman\(number)", age: age, gender: .woman, randomValueForChangeOrder: randomValueForChangeOrder)
+            allItems.append(woman)
         }
+        allItems.sort(by: {$0.randomValueForChangeOrder < $1.randomValueForChangeOrder})
+        items = allItems
     }
     
 }

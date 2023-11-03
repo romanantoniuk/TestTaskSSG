@@ -12,6 +12,7 @@ struct PersonEntity: Hashable {
     var imageName: String
     var age: Int
     var gender: PersonGender
+    var randomValueForChangeOrder: Int
     
 }
 

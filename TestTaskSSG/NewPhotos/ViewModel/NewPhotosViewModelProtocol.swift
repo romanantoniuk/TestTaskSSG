@@ -9,7 +9,7 @@ import Foundation
 
 protocol NewPhotosViewModelProtocol {
     
-    var items: Set<PersonEntity> { get }
+    var items: [PersonEntity] { get }
     var filtersData: FiltersData { get }
     var isShowAgeFilters: Bool { get }
 

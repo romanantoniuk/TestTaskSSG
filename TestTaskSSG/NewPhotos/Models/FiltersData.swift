@@ -12,5 +12,6 @@ struct FiltersData {
     var gender: PersonGender
     var minAge: Int
     var maxAge: Int
-    
+    var country: PersonCountry
+
 }

@@ -20,10 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let vm = NewPhotosViewModel()
-        let vc = NewPhotosViewController(vm: vm)
-
-        window?.rootViewController = vc
+        let tbc = MainTabBarController()
+        
+        window?.rootViewController = tbc
         window?.makeKeyAndVisible()
     }
     
@@ -57,4 +56,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
 }
-

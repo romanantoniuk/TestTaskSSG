@@ -10,6 +10,8 @@ import SnapKit
 
 class BaseView: UIView {
     
+    private (set) var isPhoneUI: Bool = false
+    
     lazy private (set) var contentView = UIView()
 
     lazy private var headerView: UIView = {
@@ -28,7 +30,7 @@ class BaseView: UIView {
     lazy private (set) var titleLabel: UILabel = {
         let label = UILabel()
         label.font = AppFonts.medium.font(with: 21)
-        label.textColor = AppColor.lightText
+        label.textColor = AppColor.textLight
         label.numberOfLines = 1
         label.textAlignment = .center
         return label
@@ -46,19 +48,18 @@ class BaseView: UIView {
     }
     
     private func setupViews() {
-        backgroundColor = AppColor.mainBackground
-        var isPhone: Bool
+        backgroundColor = AppColor.backgroundMain
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
-            isPhone = true
+            isPhoneUI = true
         case .pad, .tv, .carPlay, .mac, .vision, .unspecified:
-            isPhone = false
+            isPhoneUI = false
         @unknown default:
-            isPhone = false
+            isPhoneUI = false
         }
         addSubview(contentView)
         contentView.snp.makeConstraints { make in
-            if isPhone {
+            if isPhoneUI {
                 make.bottom.leading.trailing.equalTo(safeAreaLayoutGuide)
                 make.top.equalTo(safeAreaLayoutGuide).inset(48)
             } else {
@@ -70,7 +71,7 @@ class BaseView: UIView {
         }
         addSubview(headerView)
         headerView.snp.makeConstraints { make in
-            if isPhone {
+            if isPhoneUI {
                 make.top.equalToSuperview()
                 make.leading.trailing.equalToSuperview()
             } else {
@@ -84,9 +85,13 @@ class BaseView: UIView {
         headerImageView.snp.makeConstraints { make in
             make.bottom.leading.trailing.equalToSuperview()
         }
+        if !isPhoneUI {
+            headerView.layer.cornerRadius = 4
+            headerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
         headerView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
-            if isPhone {
+            if isPhoneUI {
                 make.top.equalTo(safeAreaLayoutGuide)
             } else {
                 make.top.equalTo(safeAreaLayoutGuide).inset(40)

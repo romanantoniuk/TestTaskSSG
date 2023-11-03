@@ -11,7 +11,13 @@ enum NewPhotosViewState {
     
     case initialSetup
     case reloadItems
-    case updateControls
+    case updateControls(type: ControlType)
     case showHideAgeFilter
 
+    enum ControlType {
+        case gender
+        case age
+        case country
+    }
+    
 }

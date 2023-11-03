@@ -20,7 +20,7 @@ enum PersonGender: CaseIterable {
         case .man:
             return "Male"
         case .woman:
-            return "Famale"
+            return "Female"
         }
     }
     
